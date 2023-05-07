@@ -36,7 +36,7 @@ mixing = false;
 mixtimes = 0;
 
 $('.mixer').click(function(){
-    if(mixing == false){
+    if(mixing === false){
         mixing = true
         mixtimes++;
         $('.mix_spoon img').addClass('move')
@@ -45,7 +45,7 @@ $('.mixer').click(function(){
             mixing = false;
         },1000)
     }
-    if(mixtimes == 6){
+    if(mixtimes === 6){
         $('.stage2').fadeOut();
         fire_modal('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mix_modal.png','Успішно змішане!','Вітаю, суміш ідеальна! Після виливання суміші у форму для випічки настав час поставити її в нашу цифрову духовку приблизно на 3 секунди. Цього часу має вистачити для гарної губчастої основи.');
 
@@ -57,7 +57,7 @@ $('.tin').draggable({
     revert:true
 })
 $( ".oven" ).droppable({
-    drop: function( event, ui ) {
+    drop: function(ui ) {
         $('.stage3').fadeOut();
         fire_modal('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/oven_modal.png','Вдала випічка!','Так! Ти вже майстер-кухар. Основа повністю пропечена і виглядає дуже смачно, але не їж її. Тепер настав час поєднати цю основу з багатьма іншими інгредієнтами, такими як джем, мармелад, шоколад тощо.');
     }
@@ -120,8 +120,7 @@ function fin(){
 
 function add_candle(){
     var stages = $('.cakemake > div').length;
-    var h = (stages/2) * 41 + 22 + 'px';
-    console.log(stages)
+
     $('.cakemake').prepend('<div class="candle" ><img src="image/pngwing.com.png" /></div>')
     $('svg').show()
     setTimeout(function(){

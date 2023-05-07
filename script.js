@@ -1,6 +1,6 @@
 $('.start').click(function(){
     $('.stage1').fadeOut();
-    fire_modal('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/cake_modal.png','Let’s make a cake!','Since it’s your birthday, I find it only fitting that you get to make your own digital birthday cake. Start by making your cake mixture, then bake it in a digital oven and finally decorate. Have fun and happy birthday');
+    fire_modal('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/cake_modal.png','Давай зробимо торт!','Оскільки це твій день народження, я вважаю цілком доречним, щоб ти зробла свій власний цифровий торт до дня народження. Починати треба із приготування суміші для торта, потім випікай її в цифровій духовці та, нарешті, прикрась. Веселіться і вітаю з Днем Народження');
 })
 
 progress = 1;
@@ -47,7 +47,7 @@ $('.mixer').click(function(){
     }
     if(mixtimes === 6){
         $('.stage2').fadeOut();
-        fire_modal('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mix_modal.png','Mix successful!','Congratulations, the mixture is perfect! After pouring the mixture into a baking tin, it’s now time to put it in our digital oven for about 3 seconds. That should be enough time for a nice spongy base.');
+        fire_modal('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mix_modal.png','Успішно змішане!','Вітаю, суміш ідеальна! Після виливання суміші у форму для випічки настав час поставити її в нашу цифрову духовку приблизно на 3 секунди. Цього часу має вистачити для гарної губчастої основи.');
 
     }
 
@@ -59,7 +59,7 @@ $('.tin').draggable({
 $( ".oven" ).droppable({
     drop: function(ui ) {
         $('.stage3').fadeOut();
-        fire_modal('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/oven_modal.png','Bake successfull!','Yes! You are a master chef. The base is fully baked and looks super yummy. Now its time to combine this base with lots of other ingredients like jam, marmalade, chocolate and more.');
+        fire_modal('https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/oven_modal.png','Вдала випічка!','Так! Ти вже майстер-кухар. Основа повністю пропечена і виглядає дуже смачно, але не їж її. Тепер настав час поєднати цю основу з багатьма іншими інгредієнтами, такими як джем, мармелад, шоколад тощо.');
     }
 })
 
@@ -120,9 +120,8 @@ function fin(){
 
 function add_candle(){
     var stages = $('.cakemake > div').length;
-    var h = (stages/2) * 41 + 22 + 'px';
-    console.log(stages)
-    $('.cakemake').prepend('<div class="candle" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/candle.png" /></div>')
+
+    $('.cakemake').prepend('<div class="candle" ><img src="dist/image/pngwing.com.png" /></div>')
     $('svg').show()
     setTimeout(function(){
         $('.sa').fadeIn()
